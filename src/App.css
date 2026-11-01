@@ -29,3 +29,134 @@
 .small {
   font-size: 0.75rem;
 }
+
+/* ANALYTICS */
+
+.analytics-page {
+  padding: 24px;
+  overflow-y: auto;
+}
+
+.analytics-page h2 {
+  font-size: 22px;
+  margin: 0 0 6px;
+  color: #1e293b;
+}
+
+.analytics-subtitle {
+  color: #64748b;
+  font-size: 13px;
+  margin-bottom: 24px;
+}
+
+.analytics-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.analytics-stat-card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.analytics-stat-card span {
+  color: #64748b;
+  font-size: 13px;
+}
+
+.analytics-stat-card strong {
+  font-size: 30px;
+  color: #1e293b;
+}
+
+.analytics-stat-card.completed strong {
+  color: #22c55e;
+}
+
+.analytics-stat-card.progress strong {
+  color: #3b82f6;
+}
+
+.analytics-stat-card.incoming strong {
+  color: #f59e0b;
+}
+
+.analytics-chart-card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 24px;
+}
+
+.analytics-chart-card h3 {
+  font-size: 16px;
+  color: #1e293b;
+  margin: 0 0 28px;
+}
+
+.analytics-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.analytics-bar-row {
+  display: grid;
+  grid-template-columns: minmax(120px, 220px) 1fr 35px;
+  align-items: center;
+  gap: 16px;
+}
+
+.analytics-bar-label {
+  font-size: 13px;
+  color: #475569;
+  overflow-wrap: anywhere;
+}
+
+.analytics-bar-track {
+  height: 13px;
+  background: #f1f5f9;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.analytics-bar-fill {
+  height: 100%;
+  background: #22c55e;
+  border-radius: 20px;
+  transition: width 0.3s ease;
+}
+
+.analytics-bar-count {
+  color: #1e293b;
+  font-size: 14px;
+}
+
+.analytics-empty {
+  text-align: center;
+  padding: 50px 20px;
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .analytics-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .analytics-bar-row {
+    grid-template-columns: 100px 1fr 25px;
+    gap: 8px;
+  }
+
+  .analytics-page {
+    padding: 14px;
+  }
+}
